@@ -1,6 +1,8 @@
 const { MessageEmbed } = require ('discord.js');
 
-const FiveM = require ('@FiveM/FiveM-API');
+const FiveM = require("discord-fivem-api");
+
+//const FiveM = require ('@FiveM/FiveM-API');
 const Guilds = require ('@Database/guildSchema');
 
 const EmbedColors = require ('@Embeds/colors');
