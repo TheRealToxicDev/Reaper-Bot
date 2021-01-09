@@ -15,7 +15,7 @@ client.aliases = new Collection();
 
 const mongoose = require("mongoose")
 
-mongoose.connect("process.env.MONGO" , {
+mongoose.connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true},(err) => {
     if (err) return console.error(err);
