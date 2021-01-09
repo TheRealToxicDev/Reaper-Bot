@@ -1,4 +1,4 @@
-const { Client } = require ('discord.js');
+const { Client, Collection } = require ('discord.js');
 
 const config = require ('./Config/botSettings');
 const API = require ('./FiveM-API/FiveM-API');
