@@ -10,43 +10,58 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
 
-    let guild = await Guilds.findOne({ guildID: message.guild.id });
+    try {
+
+        message.delete().catch()
+
+        let guild = await Guilds.findOne({ guildID: message.guild.id });
+        
+        if (!guild) return message.channel.send('Error: Guild Not Found, Please run the setup command first: ``fsb.setup``');
     
-    if (!guild) return message.channel.send('Error: Guild Not Found, Please run the setup command first: ``fsb.setup``');
-
-        FiveM.getServerInfo(guild.FiveMServer).then(server => {
-
-            let result = [];
-
-            let index = 1;
-
-            for (let player of server.players) {
-
-                result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
-            }
-
-            const result_embed = new MessageEmbed()
-               .setAuthor('Server Information', EmbedComponents.embedImage)
-               .setColor(EmbedColors.onlineColor)
-               .setDescription('**STATUS:** ONLINE 🟢')
-               .addField('Player Count', `${server.players.length}/${server.info.vars.sv_maxClients}`, true)
-               .addField('Player List', result, true)
-               .addField('Server Tags', `${server.info.vars.tags}`, true)
-               .setTimestamp()
-               .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
-
-        }).catch(error => {
-        let error_embed = new MessageEmbed()
+            FiveM.getServerInfo(guild.FiveMServer).then(server => {
+    
+                let result = [];
+    
+                let index = 1;
+    
+                for (let player of server.players) {
+    
+                    result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
+                }
+    
+                const result_embed = new MessageEmbed()
+                   .setAuthor('Server Information', EmbedComponents.embedImage)
+                   .setColor(EmbedColors.onlineColor)
+                   .setDescription('**STATUS:** ONLINE 🟢')
+                   .addField('Player Count', `${server.players.length}/${server.info.vars.sv_maxClients}`, true)
+                   .addField('Player List', result, true)
+                   .addField('Server Tags', `${server.info.vars.tags}`, true)
+                   .setTimestamp()
+                   .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+    
+            }).catch(error => {
+            let error_embed = new MessageEmbed()
+            .setAuthor('Error in Server Response', EmbedComponents.embedImage)
+            .setColor(EmbedColors.offlineColor)
+            .setDescription('**STATUS:** OFFLINE 🔴')
+            .addField('Server Response', `${error.message}`, true)
+            .setTimestamp()
+            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+            
+            return message.channel.send(error_embed);
+    
+        });
+        
+    } catch(error) {
+        let error = new MessageEmbed()
         .setAuthor('Error in Server Response', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
         .setDescription('**STATUS:** OFFLINE 🔴')
         .addField('Server Response', `${error.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
-        
-        return message.channel.send(error_embed);
 
-    });
+    }
 }
 
 module.exports.help = {
