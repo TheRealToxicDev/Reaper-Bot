@@ -54,9 +54,9 @@ module.exports.run = async (client, message, args) => {
         
     } catch(e) {
         let error = new MessageEmbed()
-        .setAuthor('Error in Server Response', EmbedComponents.embedImage)
+        .setAuthor('Critical Error', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
-        .setDescription('**STATUS:** OFFLINE 🔴')
+        .setDescription('Please Report this error to Toxic Dev [here]()')
         .addField('Server Response', `${e.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
