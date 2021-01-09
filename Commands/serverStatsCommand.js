@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args) => {
         .setAuthor('Critical Error', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
         .setDescription('Please Report this error to Toxic Dev [here]()')
-        .addField('Server Response', `${e.message}`, true)
+        .addField('Error:', `${e.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
         
