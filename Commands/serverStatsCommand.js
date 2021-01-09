@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args) => {
         let error = new MessageEmbed()
         .setAuthor('Critical Error', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
-        .setDescription('Please Report this error to Toxic Dev [here]()')
+        .setDescription('Please Report this error to Toxic Dev in the [Toxic Development](https://discord.gg/MbjZ7xc) Server')
         .addField('Error:', `${e.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
