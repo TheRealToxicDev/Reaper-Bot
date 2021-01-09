@@ -11,6 +11,8 @@ module.exports.run = async (client, message, args) => {
     message.delete().catch()
 
     let guild = await Guilds.findOne({ guildID: message.guild.id });
+    
+    if (!guild) return message.channel.send('Error: Guild Not Found, Please run the setup command first: ``fsb.setup``');
 
         FiveM.getServerInfo(guild.FiveMServer).then(server => {
 
