@@ -34,7 +34,7 @@ module.exports = async (client, message) => {
     ownerOnly.setDescription("Ree!! You dont have permission to use this command!!")
 
     if(cmd.requirements.devOnly && !client.config.staff.includes(message.author.id))
-    return message.channel.send(ownerEmbed)
+    return message.channel.send(ownerOnly)
 
     let embed = new MessageEmbed()
     .setAuthor("Lacking Permissions ❌", client.config.embedImage)
