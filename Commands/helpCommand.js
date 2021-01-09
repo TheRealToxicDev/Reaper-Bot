@@ -22,13 +22,15 @@ module.exports.run = async (client, message, args) => {
 
     } catch (error) {
 
-        let error = new MessageEmbed()
+        let error_embed = new MessageEmbed()
         .setAuthor('Critical Error', EmbedComponents.embedImage)
         .setColor(EmbedColors.mainColor)
         .setDescription('Please report this to Toxic Dev')
         .addField('Error', `${error.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+        
+        return message.channel.send(error_embed)
 
     }
 }
