@@ -52,12 +52,12 @@ module.exports.run = async (client, message, args) => {
     
         });
         
-    } catch(error) {
+    } catch(e) {
         let error = new MessageEmbed()
         .setAuthor('Error in Server Response', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
         .setDescription('**STATUS:** OFFLINE 🔴')
-        .addField('Server Response', `${error.message}`, true)
+        .addField('Server Response', `${e.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
