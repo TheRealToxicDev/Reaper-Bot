@@ -40,13 +40,15 @@ module.exports.run = async (client, message, args) => {
     
     } catch (error) {
 
-        let error = new MessageEmbed()
+        let error_embed = new MessageEmbed()
         .setAuthor('Error with Setup', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
         .setDescription('Please report this to Toxic Dev')
         .addField('Error', `${error.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+        
+       return message.channel.send(error_embed)
 
     }
 }
