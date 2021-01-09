@@ -13,6 +13,16 @@ require("module-alias/register");
 client.commands = new Collection();
 client.aliases = new Collection();
 
+const mongoose = require("mongoose")
+
+mongoose.connect("process.env.MONGO" , {
+    useNewUrlParser: true,
+    useUnifiedTopology: true},(err) => {
+    if (err) return console.error(err);
+    console.log("MONGODB IS CONNECTED")
+    })
+
+
 client.limits = new Map();
 
 client.config = config;
