@@ -13,8 +13,10 @@ module.exports.run = async (client, message, args) => {
            .setAuthor('FiveM Stats Bot Help', EmbedComponents.embedImage)
            .setColor(EmbedColors.mainColor)
            .setDescription('Finding yourself stuck? Heres some help!!')
-           .addField('Set a Server IP', '``fsb.setip`` || Used to set your FiveM Server IP', true)
-           .addField('Setup Command', 'COMING SOON || Completes the Setup for you!!', true)
+           .addField('Setup Command', '``fsb.setup`` | Link your FiveM Server Info to the Bot', true)
+           .addField('Stats Command', '``fsb.server-stats`` | Display your FiveM Server Stats', true)
+           .addField('Invite Command', '``fsb.invite`` | Invite the bot to your server', true)
+           .addField('Collected Data', 'FiveM Server Stats Bot, collects data such as Guild ID and FiveM Server IP and Port, To have this Data deleted please contact Toxic Dev [here](https://discord.gg/MbjZ7xc)', true)
            .setTimestamp()
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
