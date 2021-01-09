@@ -60,6 +60,8 @@ module.exports.run = async (client, message, args) => {
         .addField('Server Response', `${e.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+        
+        return message.channel.send(error);
 
     }
 }
