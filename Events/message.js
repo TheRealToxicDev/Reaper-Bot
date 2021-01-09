@@ -2,6 +2,9 @@ const ms = require('parse-ms');
 const { MessageEmbed } = require("discord.js");
 const ratetime = new Set()
 
+const EmbedColors = require ('@Embeds/colors');
+const EmbedComponents = require('@Embeds/components');
+
 module.exports = async (client, message) => {
 
     if(message.author.bot) return;
@@ -18,9 +21,9 @@ module.exports = async (client, message) => {
     if(!message.content.toLowerCase().startsWith(prefix)) return;
 
     let no_cmd = new MessageEmbed()
-    .setAuthor("Command not Found", client.config.embedImage)
+    .setAuthor("Command not Found", EmbedComponents.embedImage)
     .setDescription(`${commands} Is not a command that i can find.`)
-    .setFooter('© FiveM Stats | 2021', client.config.embedImage)
+    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
     if(!cmd) return message.channel.send(no_cmd);
 
@@ -36,13 +39,13 @@ module.exports = async (client, message) => {
     let embed = new MessageEmbed()
     .setAuthor("Lacking Permissions ❌", client.config.embedImage)
     .addField(`Missing Perms`, missingPerms(message.member, cmd.requirements.userPerms))
-    .setFooter(client.config.embedImage)
+    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
     if(cmd.requirements.userPerms && !message.member.permissions.has(cmd.requirements.userPerms)) return message.channel.send(embed)
     
     let embed1 = new MessageEmbed()
     .setAuthor("Lacking Permissions ❌", client.user.displayAvatarURL())
     .addField(`Tox Mod Missing Perms`, missingPerms(message.guild.me, cmd.requirements.clientPerms))
-    .setFooter('© FiveM Stats | 2021', client.config.embedImage)
+    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
     if(cmd.requirements.clientPerms && !message.guild.me.permissions.has(cmd.requirements.clientPerms)) return message.channel.send(embed1)
 
 
