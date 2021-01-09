@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
         
-        let FiveMInfo = args.slice(1).join(' ');
+        let FiveMInfo = args.slice(0).join(' ');
 
         if (!FiveMInfo) return message.channel.send('Please provide the Server IP and Port (IE: fsb.set 0.0.0.0:0000) Replace the 0s with your servers IP:PORT')
 
