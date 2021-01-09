@@ -10,9 +10,7 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
 
-    try {
-
-        let guild = await Guilds.findOne({ guildID: message.guild.id });
+    let guild = await Guilds.findOne({ guildID: message.guild.id });
 
         FiveM.getServerInfo(guild.FiveMServer).then(server => {
 
