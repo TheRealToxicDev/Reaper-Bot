@@ -12,6 +12,10 @@ module.exports.run = async (client, message, args) => {
 
     try {
 
+        let guild = await Guilds.findOne({ guildID: message.guild.id });
+
+        if (!guild) await new Guilds({ guildID: message.guild.id }).save();
+
         let setup_message = new MessageEmbed()
            .setAuthor('FiveM Stats | Setup', EmbedComponents.embedImage)
            .setColor(EmbedColors.mainColor)
