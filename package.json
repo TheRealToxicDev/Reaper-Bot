@@ -23,6 +23,7 @@
     "author": "Toxic Dev",
     "license": "ISC",
     "dependencies": {
+      "discord-fivem-api": "^1.0.1",
       "discord.js": "^12.4.1",
       "fs": "0.0.1-security",
       "mongoose": "^5.9.26",
