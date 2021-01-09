@@ -36,13 +36,15 @@ module.exports.run = async (client, message, args) => {
                .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
         }).catch(error => {
-        let error = new MessageEmbed()
+        let error_embed = new MessageEmbed()
         .setAuthor('Error in Server Response', EmbedComponents.embedImage)
         .setColor(EmbedColors.offlineColor)
         .setDescription('**STATUS:** OFFLINE 🔴')
         .addField('Server Response', `${error.message}`, true)
         .setTimestamp()
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+        
+        return message.channel.send(error_embed);
 
     });
 }
