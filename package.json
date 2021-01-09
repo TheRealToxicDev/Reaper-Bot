@@ -4,32 +4,43 @@
     "description": "",
     "main": "StatsBot.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node StatsBot.js"
+      "test": "echo \"Error: no test specified\" && exit 1"
     },
+
     "repository": {
       "type": "git",
       "url": "git+https://github.com/TheRealToxicDev"
     },
+
     "keywords": [
       "FiveM",
       "Api",
       "discord",
       "fivem stats"
     ],
+
     "author": "Toxic Dev",
     "license": "ISC",
     "dependencies": {
       "discord.js": "^12.4.1",
       "fs": "0.0.1-security",
       "mongoose": "^5.9.26",
+      "module-alias": "^2.2.2",
       "ms": "^2.1.2",
       "node-fetch": "^2.6.0",
       "parse-ms": "^2.1.0",
       "path": "^0.12.7",
       "request": "^2.88.2"
     },
+
     "bugs": {
       "url": "https://github.com/TheRealToxicDev"
-    }
+    },
+
+    "_moduleAliases": {
+      "@root": ".",
+      "@Database": "./Database",
+      "@FiveM": "./FiveM-API",
+      "@Embeds": "./Structure/Embeds"
+     }
   }

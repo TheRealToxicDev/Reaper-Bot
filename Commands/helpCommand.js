@@ -1,5 +1,8 @@
 const { MessageEmbed } = require ('discord.js');
 
+const EmbedColors = require ('@Embeds/colors');
+const EmbedComponents = require('@Embeds/components');
+
 module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
@@ -7,25 +10,25 @@ module.exports.run = async (client, message, args) => {
     try {
 
         let help_embed = new MessageEmbed()
-           .setAuthor('FiveM Stats Bot Help', client.config.embedImage)
-           .setColor(client.config.embedColor)
+           .setAuthor('FiveM Stats Bot Help', EmbedComponents.embedImage)
+           .setColor(EmbedColors.mainColor)
            .setDescription('Finding yourself stuck? Heres some help!!')
            .addField('Set a Server IP', '``fsb.setip`` || Used to set your FiveM Server IP', true)
            .addField('Setup Command', 'COMING SOON || Completes the Setup for you!!', true)
            .setTimestamp()
-           .setFooter(client.config.embedFooter, client.config.embedImage)
+           .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
            return message.channel.send(help_embed);
 
     } catch (error) {
 
         let error = new MessageEmbed()
-        .setAuthor('Critical Error', client.config.embedImage)
-        .setColor(client.config.embedColor)
+        .setAuthor('Critical Error', EmbedComponents.embedImage)
+        .setColor(EmbedColors.mainColor)
         .setDescription('Please report this to Toxic Dev')
         .addField('Error', `${error.message}`, true)
         .setTimestamp()
-        .setFooter(client.config.embedFooter, client.config.embedImage)
+        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
     }
 }

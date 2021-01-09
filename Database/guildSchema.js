@@ -11,7 +11,7 @@ const guildSchema = new mongo.Schema({
         default: false
     },
 
-    serverIP1 = {
+    FiveMServer: {
         type: String,
         unique: true
     }

@@ -8,6 +8,8 @@ const client = new Client({
     disabledEvents: ["TYPING_START"]
 });
 
+require("module-alias/register");
+
 client.commands = new Collection();
 client.aliases = new Collection();
 
