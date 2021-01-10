@@ -25,6 +25,8 @@ module.exports.run = async (client, message, args) => {
                 let result = [];
     
                 let index = 1;
+                
+                if (!result || result === []) result = '0' 
     
                 for (let player of server.players) {
     
