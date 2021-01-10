@@ -26,16 +26,16 @@ module.exports.run = async (client, message, args) => {
         
         let FiveMInfo = args.slice(0).join(' ');
 
-        if (!FiveMInfo) return message.channel.send('Please provide the Server IP and Port (IE: fsb.set 0.0.0.0:0000) Replace the 0s with your servers IP:PORT')
+        if (!FiveMInfo) return message.channel.send('Please provide the Server IP and Port \n (IE: **fsb.setup 0.0.0.0:0000**) || Replace the 0s with your servers IP:PORT ||')
 
-        if (!FiveMInfo.includes(':')) return message.channel.send('Please provide the Server IP and Port (IE: fsb.set 0.0.0.0:0000) Replace the 0s with your servers IP:PORT')
+        if (!FiveMInfo.includes(':')) return message.channel.send('Please provide the Server IP and Port \n (IE: **fsb.setup 0.0.0.0:0000**) || Replace the 0s with your servers IP:PORT ||')
 
         await Guilds.updateOne({ guildID: message.guild.id }, { $set: { FiveMServer: FiveMInfo }});
 
         let setup_complete = new MessageEmbed()
         .setAuthor('FiveM Stats | Complete', EmbedComponents.embedImage)
         .setColor(EmbedColors.onlineColor)
-        .setDescription('Your Server IP and Port have been set.')
+        .setDescription('Your Server IP and Port have been set. \n\nIf you have made an error, or wish to change the connected FiveM server, run **fsb.setup** again.')
         .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
         return message.channel.send(setup_complete)
