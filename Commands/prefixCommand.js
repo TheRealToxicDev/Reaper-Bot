@@ -12,6 +12,8 @@ module.exports.run = async (client, message, args) => {
     let guild = await Guilds.findOne({ guildID: message.guild.id });
 
     if (!guild) await new Guilds({ guildID: message.guild.id }).save();
+    
+    let new_prefix = args.slice(0).join(' ');
 
     let tomany_args = new MessageEmbed()
        .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
@@ -21,7 +23,7 @@ module.exports.run = async (client, message, args) => {
        .setTimestamp()
        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
-    if (args[0].length > 10) return message.channel.send(tomany_args);
+    if (new_prefix.length > 10) return message.channel.send(tomany_args);
     
         let missing_args = new MessageEmbed()
        .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
@@ -31,9 +33,9 @@ module.exports.run = async (client, message, args) => {
        .setTimestamp()
        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
     
-    if (!args[0]) return message.channel.send(missing_args);
+    if (!new_prefix) return message.channel.send(missing_args);
 
-    guild.prefix = args[0]
+    guild.prefix = new_prefix;
 
     await guild.save();
 
