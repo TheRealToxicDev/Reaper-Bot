@@ -1,6 +1,9 @@
+
 const { MessageEmbed } = require ('discord.js');
 
-const FiveM = require ('@FiveM/FiveM-API');
+const FiveM = require("discord-fivem-api");
+
+//const FiveM = require ('@FiveM/FiveM-API');
 const Guilds = require ('@Database/guildSchema');
 
 const EmbedColors = require ('@Embeds/colors');
@@ -25,40 +28,47 @@ module.exports.run = async (client, message, args) => {
                 let index = 1;
     
                 for (let player of server.players) {
-                    
-                    if (!player) result = 'No Players Online'
     
                     result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
                 }
                 
-                let players;
-                
-                if(server.players === 'undefined') players = '0';
-                
                 if (result < 1) result = 'No Players Online'
-                
-                if (result === "undefined") result = 'No Players Online';
                     
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
-                   .addField('Player Count', `${server.players.length}/${server.infos.vars.sv_maxClients}`, true)
+                   .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
                    //.addField('Player List', result, true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
     
             }).catch(error => {
-            let error_embed = new MessageEmbed()
-            .setAuthor('Error in Server Response', EmbedComponents.embedImage)
-            .setColor(EmbedColors.offlineColor)
-            .setDescription('**STATUS:** OFFLINE 🔴')
-            .addField('Server Response', `${error.message}`, true)
-            .setTimestamp()
-            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
             
-            return message.channel.send(error_embed);
-    
+            if (error.message === "players is not defined")
+            {
+                let empty_embed = new MessageEmbed()
+                .setAuthor('Error in Server Response', EmbedComponents.embedImage)
+                .setColor(EmbedColors.offlineColor)
+                .setDescription('**STATUS:** ONLINE 🟢')
+                .setTimestamp()
+                .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+                .addField('Server Response', `No players online`, true)
+                
+                return message.channel.send(empty_embed);
+            }
+            else 
+            {
+               let error_embed = new MessageEmbed()
+                .setAuthor('Error in Server Response', EmbedComponents.embedImage)
+                .setColor(EmbedColors.offlineColor)
+                .setDescription('Uh oh..')
+                .addField('Theres been an error fetching this data', \`\n Server Response: \n > \`\`\`${error.message}\`\`\``, true)
+                .setTimestamp()
+                .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+            
+                return message.channel.send(error_embed); 
+            }
         });
         
     } catch(e) {
