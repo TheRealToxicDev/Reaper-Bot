@@ -9,6 +9,8 @@ module.exports.run = async (client, message, args) => {
 
     try {
 
+        let website_link ='https://statsbot.toxicdev.me'
+
         let help_embed = new MessageEmbed()
            .setAuthor('FiveM Stats Bot Help', EmbedComponents.embedImage)
            .setColor(EmbedColors.mainColor)
@@ -17,7 +19,11 @@ module.exports.run = async (client, message, args) => {
            .addField('Stats Command', '``fsb.server-stats`` | Display your FiveM Server Stats', true)
            .addField('Invite Command', '``fsb.invite`` | Invite the bot to your server', true)
            .addField('Prefix Command', '``fsb.prefix`` | Set the bots prefix for your server', true)
-           .addField('Collected Data', 'FiveM Server Stats Bot, collects data such as \n 1. Guild ID \n 2. FiveM Server IP and Port. \nTo have this Data deleted please contact Toxic Dev [here](https://discord.gg/MbjZ7xc) or via EMail: `statsbot@toxicdev.me` \n\nAny and all Data is stored privately in our database.', true)
+           .addField('\u200B', '\u200B')
+           .addField('My Website', `[Click Me](${website_link})`, true)
+           .addField('Privacy Policy', `[Click Me](${website_link}/privacy)`, true)
+           .addField('Commands List', `[Click Me](${website_link}/commands)`, true)
+           .addField('Bug Reports', `[Click Me](${website_link}/bug)`, true)
            .setTimestamp()
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
