@@ -33,6 +33,7 @@ module.exports.run = async (client, message, args) => {
                 }
                 
                 if (result < 1) result = 'No Players Online'
+               
                     
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
@@ -46,14 +47,21 @@ module.exports.run = async (client, message, args) => {
             }).catch(error => {
             
             if (error.message === "players is not defined")
+                
             {
-                let empty_embed = new MessageEmbed()
-                .setAuthor('Server Information', EmbedComponents.embedImage)
-                .setColor(EmbedColors.offlineColor)
-                .setDescription('**STATUS:** ONLINE 🟢')
-                .setTimestamp()
-                .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
-                .addField('Server Response', `No players online`, true)
+                
+              let players;
+                
+                players = '0';
+                              
+                const result_embed = new MessageEmbed()
+                   .setAuthor('Server Information', EmbedComponents.embedImage)
+                   .setColor(EmbedColors.onlineColor)
+                   .setDescription('**STATUS:** ONLINE 🟢')
+                   .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
+                   .addField('Player List', 'No Players Online', true)
+                   .setTimestamp()
+                   .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
                 
                 return message.channel.send(empty_embed);
             }
