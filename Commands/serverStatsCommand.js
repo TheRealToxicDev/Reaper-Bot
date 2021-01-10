@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
             if (error.message === "players is not defined")
             {
                 let empty_embed = new MessageEmbed()
-                .setAuthor('Error in Server Response', EmbedComponents.embedImage)
+                .setAuthor('Server Information', EmbedComponents.embedImage)
                 .setColor(EmbedColors.offlineColor)
                 .setDescription('**STATUS:** ONLINE 🟢')
                 .setTimestamp()
