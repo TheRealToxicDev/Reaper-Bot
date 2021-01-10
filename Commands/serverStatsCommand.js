@@ -16,6 +16,8 @@ module.exports.run = async (client, message, args) => {
     try {
 
         message.delete().catch()
+        
+        let players;
 
         let guild = await Guilds.findOne({ guildID: message.guild.id });
         
@@ -29,7 +31,7 @@ module.exports.run = async (client, message, args) => {
     
                 for (let player of server.players) {
     
-                    result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
+                    players += result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
                 }
                 
                 if (result < 1) result = 'No Players Online'
