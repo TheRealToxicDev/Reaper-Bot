@@ -58,7 +58,6 @@ module.exports.run = async (client, message, args) => {
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
-                   .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
                    .addField('Player List', 'No Active Players', true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
