@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
         let help_embed = new MessageEmbed()
            .setAuthor('Invite | FiveM Stats Bot', EmbedComponents.embedImage)
            .setColor(EmbedColors.mainColor)
-           .setDescription('Invie me to your server using the following link.')
+           .setDescription('Invite me to your server using the following link.')
            .addField('Invite Link', '[Click Me](https://discord.com/api/oauth2/authorize?client_id=797247285981478923&permissions=2146828102&scope=bot)', true)
            .setTimestamp()
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
