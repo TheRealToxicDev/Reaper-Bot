@@ -13,10 +13,20 @@ module.exports.run = async (client, message, args) => {
 
     if (!guild) await new Guilds({ guildID: message.guild.id }).save();
 
-    let missing_args = new MessageEmbed()
+    let tomany_args = new MessageEmbed()
        .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
        .setColor(EmbedColors.mainColor)
-       .setDescription('Please provide the required args ``tox.prefix newPrefix``')
+       .setDescription('Prefix cant be more then 10 Characters')
+       .addField('Current Prefix', 'tox.', true)
+       .setTimestamp()
+       .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+
+    if (!args[0].length > 10) return message.channel.send(tomany_args);
+    
+        let missing_args = new MessageEmbed()
+       .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
+       .setColor(EmbedColors.mainColor)
+       .setDescription('Please provide the required args ``fsb.prefix newPrefix``')
        .addField('Current Prefix', 'tox.', true)
        .setTimestamp()
        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
@@ -31,7 +41,7 @@ module.exports.run = async (client, message, args) => {
     .setAuthor('Success!', EmbedComponents.embedImage)
     .setColor(EmbedColors.mainColor)
     .setDescription('Prefix has been set')
-    .addField('Default Prefix', 'tox.', true)
+    .addField('Default Prefix', 'fsb.', true)
     .addField('New Prefix', args[0], true)
     .setTimestamp()
     .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
