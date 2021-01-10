@@ -33,6 +33,8 @@ module.exports.run = async (client, message, args) => {
                 
                 if (result < 1) result = 'No Players Online'
                 
+                if (result === []) result = 'No Players Online'
+                
     
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
