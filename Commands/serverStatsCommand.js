@@ -1,8 +1,6 @@
 const { MessageEmbed } = require ('discord.js');
 
-const FiveM = require("discord-fivem-api");
-
-//const FiveM = require ('@FiveM/FiveM-API');
+const FiveM = require ('@FiveM/FiveM-API');
 const Guilds = require ('@Database/guildSchema');
 
 const EmbedColors = require ('@Embeds/colors');
@@ -31,7 +29,13 @@ module.exports.run = async (client, message, args) => {
                     result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
                 }
                 
+                let players;
+                
+                if(server.players === 'undefined') players = '0';
+                
                 if (result < 1) result = 'No Players Online'
+                
+                if (result === "undefined") result = 'No Players Online';
                     
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
