@@ -35,13 +35,17 @@ module.exports.run = async (client, message, args) => {
                 
                 if (result === []) result = 'No Players Online'
                 
+                let players = server.players;
+                
+                if (!players.length) players = '0';
+                
     
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
-                   //.addField('Player Count', `${server.players.length}/${server.infos.vars.sv_maxClients}`, true)
-                   .addField('Player List', result, true)
+                   .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
+                   //.addField('Player List', result, true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
     
