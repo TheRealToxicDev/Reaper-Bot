@@ -14,7 +14,12 @@ const guildSchema = new mongo.Schema({
     FiveMServer: {
         type: String,
         unique: true
-    }
+    },
+    
+     prefix: {
+        type : String,
+        default: 'fsb.',
+    },
 });
 
 module.exports = mongo.model("Guilds", guildSchema);
