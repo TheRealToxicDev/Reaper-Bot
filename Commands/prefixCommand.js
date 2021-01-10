@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
        .setTimestamp()
        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
-    if (!args[0) return message.channel.send(tomany_args);
+    if (!args[0]) return message.channel.send(tomany_args);
     
         let missing_args = new MessageEmbed()
        .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
