@@ -26,22 +26,20 @@ module.exports.run = async (client, message, args) => {
     
                 let index = 1;
                 
-                if (result < 1 || result.includes('[]')) result = '0';
-                
-                let players = server.players;
-                
                 if (players < 1 || players.includes('[]')) players = '0';
     
                 for (let player of server.players) {
     
                     result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
                 }
+                
+                if (result < 1) result = 'No Players Online'
     
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
-                   .addField('Player Count', `${server.players.length}/${server.infos.vars.sv_maxClients}`, true)
+                   //.addField('Player Count', `${server.players.length}/${server.infos.vars.sv_maxClients}`, true)
                    //.addField('Player List', result, true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
