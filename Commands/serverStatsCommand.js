@@ -32,14 +32,7 @@ module.exports.run = async (client, message, args) => {
                 }
                 
                 if (result < 1) result = 'No Players Online'
-                
-                if (result === []) result = 'No Players Online'
-                
-                let players = server.players;
-                
-                if (!players.length) players = '0';
-                
-    
+                    
                 const result_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
