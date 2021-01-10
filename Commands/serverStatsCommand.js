@@ -42,9 +42,11 @@ module.exports.run = async (client, message, args) => {
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
                    .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
-                   //.addField('Player List', result, true)
+                   .addField('Player List', result, true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+                
+                return message.channel.send(result_embed);
     
             }).catch(error => {
             
