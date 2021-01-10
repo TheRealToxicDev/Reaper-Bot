@@ -14,7 +14,7 @@ module.exports = async (client, message) => {
 
    if (!guild) await new Guilds({ guildID: message.guild.id }).save();
 
-   else prefix = guild.prefix || 'tox.';
+   else prefix = guild.prefix || 'fsb.';
     
     const args = message.content.split(/ +/g);
 
