@@ -16,7 +16,8 @@ module.exports.run = async (client, message, args) => {
            .addField('Setup Command', '``fsb.setup`` | Link your FiveM Server Info to the Bot', true)
            .addField('Stats Command', '``fsb.server-stats`` | Display your FiveM Server Stats', true)
            .addField('Invite Command', '``fsb.invite`` | Invite the bot to your server', true)
-           .addField('Collected Data', 'FiveM Server Stats Bot, collects data such as Guild ID and FiveM Server IP and Port, To have this Data deleted please contact Toxic Dev [here](https://discord.gg/MbjZ7xc)\n\nAny and all Data stored here is hosted privately in a Database.', true)
+           .addField('Prefix Command', '``fsb.prefix`` | Set the bots prefix for your server', true)
+           .addField('Collected Data', 'FiveM Server Stats Bot, collects data such as \n 1. Guild ID \n 2. FiveM Server IP and Port. \nTo have this Data deleted please contact Toxic Dev [here](https://discord.gg/MbjZ7xc) or via EMail: `statsbot@toxicdev.me` \n\nAny and all Data is stored privately in our database.', true)
            .setTimestamp()
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
