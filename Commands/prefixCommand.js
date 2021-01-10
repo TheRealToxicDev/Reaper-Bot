@@ -19,7 +19,8 @@ module.exports.run = async (client, message, args) => {
        .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
        .setColor(EmbedColors.mainColor)
        .setDescription('Prefix cant be more then 10 Characters')
-       .addField('Current Prefix', 'tox.', true)
+       .addField('Default Prefix', 'fsb.', true)
+        .addField('Current Prefix', guild.prefix, true)
        .setTimestamp()
        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
@@ -29,7 +30,8 @@ module.exports.run = async (client, message, args) => {
        .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
        .setColor(EmbedColors.mainColor)
        .setDescription('Please provide the required args ``fsb.prefix newPrefix``')
-       .addField('Current Prefix', 'tox.', true)
+       .addField('Default Prefix', 'fsb.', true)
+       .addField('Current Prefix', guild.prefix, true)
        .setTimestamp()
        .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
     
