@@ -25,6 +25,8 @@ module.exports.run = async (client, message, args) => {
                 let index = 1;
     
                 for (let player of server.players) {
+                    
+                    if (!player) result = 'No Players Online'
     
                     result.push(`${index++}. Username: ${player.name} | ID: ${player.id} | Ping: ${player.ping}ms\n`)
                 }
@@ -41,7 +43,7 @@ module.exports.run = async (client, message, args) => {
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
-                   .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
+                   .addField('Player Count', `${server.players.length}/${server.infos.vars.sv_maxClients}`, true)
                    //.addField('Player List', result, true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
