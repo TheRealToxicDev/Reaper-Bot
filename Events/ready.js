@@ -29,6 +29,12 @@ let activities = [
       options: {
         type: 'PLAYING'
       }
+    },
+    {
+      name: 'statsbot.toxicdev.me',
+      options: {
+        type: 'WATCHING'
+      }
     }
   ];
   let i = 0;
