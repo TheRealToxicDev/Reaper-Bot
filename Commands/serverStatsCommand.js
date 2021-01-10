@@ -63,7 +63,7 @@ module.exports.run = async (client, message, args) => {
                 .setAuthor('Error in Server Response', EmbedComponents.embedImage)
                 .setColor(EmbedColors.offlineColor)
                 .setDescription('Uh oh..')
-                .addField('Theres been an error fetching this data', \`\n Server Response: \n > *${error.message}*`, true)
+                .addField('Theres been an error fetching this data', `\n Server Response: \n > \`\`\`${error.message}\`\`\``, true)
                 .setTimestamp()
                 .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
             
