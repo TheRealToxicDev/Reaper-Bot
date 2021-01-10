@@ -94,7 +94,7 @@ module.exports.help = {
 }
 
 module.exports.requirements = {
-    userPerms: ['ADMINISTRATOR'],
+    userPerms: ["ADMINISTRATOR"],
     clientPerms: ["EMBED_LINKS"],
     devOnly: false
 }
