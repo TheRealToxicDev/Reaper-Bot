@@ -6,6 +6,8 @@ const EmbedColors = require ('@Embeds/colors');
 const EmbedComponents = require('@Embeds/components');
 
 module.exports.run = async (client, message, args) => {
+    
+      if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send('Only Server Admins can execute this command!');
 
     let guild = await Guilds.findOne({ guildID: message.guild.id });
 
