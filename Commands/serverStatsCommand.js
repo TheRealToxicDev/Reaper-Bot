@@ -54,12 +54,12 @@ module.exports.run = async (client, message, args) => {
                 
                 players = '0';
                               
-                const result_embed = new MessageEmbed()
+                const empty_embed = new MessageEmbed()
                    .setAuthor('Server Information', EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
                    .addField('Player Count', `${players}/${server.infos.vars.sv_maxClients}`, true)
-                   .addField('Player List', 'No Players Online', true)
+                   .addField('Player List', 'No Active Players', true)
                    .setTimestamp()
                    .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
                 
