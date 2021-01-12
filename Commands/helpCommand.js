@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
            .addField('Privacy Policy', `[Click Me](${website_link}/privacy)`, true)
            .addField('Commands List', `[Click Me](${website_link}/commands)`, true)
            .addField('Bug Reports', `[Click Me](${website_link}/bug)`, true)
-           .addField('GitHub', `[Click Me](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)`)
+           .addField('GitHub', `[Click Me](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)`, true)
            .setTimestamp()
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
