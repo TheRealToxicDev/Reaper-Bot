@@ -21,9 +21,11 @@ module.exports.run = async (client, message, args) => {
            .addField('Prefix Command', '``fsb.prefix`` | Set the bots prefix for your server', true)
            .addField('\u200B', '\u200B')
            .addField('My Website', `[Click Me](${website_link})`, true)
+           .addField('My Website', `[Click Me](${website_link}/dashboard)`, true)
            .addField('Privacy Policy', `[Click Me](${website_link}/privacy)`, true)
            .addField('Commands List', `[Click Me](${website_link}/commands)`, true)
            .addField('Bug Reports', `[Click Me](${website_link}/bug)`, true)
+           .addField('GitHub', `[Click Me](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)`)
            .setTimestamp()
            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
