@@ -5,7 +5,7 @@ No, As it stands right now FiveM Stats is a basic Discord Bot used to display
 a list of currently online players, if no players are online it will say 0/30 or 
 whatever your player count max is.
 
-### Suggest New Features
+## Suggest New Features
 You can suggest a new feature to be added on the [GitHub](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)
 
 ---
