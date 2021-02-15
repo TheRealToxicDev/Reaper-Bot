@@ -4,10 +4,14 @@ const { join } = require("path")
 const filePath2 = join(__dirname, "..", "Events");
 const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
+const HttpRequest = require('request');
 
+const CheckForUpdate = require('@Functions/updateCheck');
 
 
 module.exports = async (client) => {
+
+  CheckForUpdate();
 
 let activities = [
     {
