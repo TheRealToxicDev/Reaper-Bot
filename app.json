@@ -1,0 +1,26 @@
+{
+  "name": "FiveM Stats Bot",
+  "description": "Simple Discord Bot made to Interact with your FiveM Server.",
+  "keywords": [
+    "productivity",
+    "node",
+    "nodejs"
+  ],
+  "website": "https://statsbot.toxicdev.me/",
+  "repository": "https://github.com/TheRealToxicDev/FiveM-Stats",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "success_url": "/welcome",
+  "scripts": {
+    "start": "node ."
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  }
+}
