@@ -6,6 +6,8 @@ const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
 const HttpRequest = require('request');
 const { MessageEmbed } = require ('discord.js');
+const EmbedColors = require ('@Embeds/colors');
+const EmbedComponents = require('@Embeds/components');
 
 module.exports = async (client) => {
 
