@@ -3,6 +3,7 @@
 
 - About
     - [Intro](/about/index)
+    - [FAQs](/about/faqs)
 - Community
     - [Github](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)
     - [Report an Issue](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/issues)
