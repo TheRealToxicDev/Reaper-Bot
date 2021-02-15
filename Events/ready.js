@@ -61,7 +61,7 @@ let activities = [
             if (json.CurrentVersion === package.version) {
               
             let up_to_date = new MessageEmbed()
-            .setAuthor('Version Check Initiated', EmbedComponents.embedImage)
+            .setAuthor('Version Check: Successful', EmbedComponents.embedImage)
             .setColor(EmbedColors.onlineColor)
             .setDescription('Up-To Date and Ready to go!!')
             .addField('Current Version', `v${package.version}`)
