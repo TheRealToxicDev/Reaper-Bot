@@ -38,6 +38,8 @@ function CheckForUpdate() {
                 .setDescription('The Version Check was Successful, Enjoy!!')
                 .setTimestamp()
                 .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+                
+                ready_channel.send(up_to_date)
             } else {
                 let outdated = new MessageEmbed()
                 outdated.setAuthor('Version Check: Failed', EmbedComponents.embedImage)
@@ -46,7 +48,7 @@ function CheckForUpdate() {
                 outdated.addField('Current Version', `${current_version}`)
                 outdated.addField('Newest Version', `${NewestVersion}`)
 
-                await HttpRequest(
+                HttpRequest(
                     {
                         url: `https://raw.githubusercontent.com/TheRealToxicDev/${process.env.RESOURCE_REPO}/master/${process.env.PROJECT_NAME}/CHANGES`,
                         timeout: 5000,
@@ -56,6 +58,8 @@ function CheckForUpdate() {
                         outdated.addField('Change Log', `${Changes}`)
                         outdated.setTimestamp()
                         outdated.setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+                        
+                        ready_channel.send(outdated)
                     }
                 )
             }
