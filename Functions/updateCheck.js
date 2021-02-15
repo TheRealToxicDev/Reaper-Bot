@@ -6,7 +6,7 @@ const EmbedComponents = require('@Embeds/components');
 
 const ready_channel = client.channels.cache.find(c => c.id === process.env.READY_LOGS);
 
-function CheckForUpdate() {
+function CheckForUpdate(client, config) {
 
     const current_version = '1.0.0';
     const GithubResourceName = 'FiveM-Stats-Bot';
