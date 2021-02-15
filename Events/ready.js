@@ -35,7 +35,7 @@ module.exports = async (client) => {
             } else if (json.TestVersion !== package.version) { {
                 let outdated = new MessageEmbed()
                 .setAuthor('Version Check: Failed', EmbedComponents.embedImage)
-                .setColor(EmbedColors.onlineColor)
+                .setColor(EmbedColors.offlineColor)
                 .setDescription('You are using an Outdated version of [FiveM Stats Bot](https://statsbot.toxicdev.me/), Please download the Newest Release to avoid any issues.')
                 .addField('Current Version', `${package.version}`)
                 .addField('Newest Version', `${json.TestVersion}`)
