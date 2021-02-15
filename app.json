@@ -42,8 +42,7 @@
     "RESOURCE_REPO": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "FiveM_Project_Resources",
-          "disabled": true      
+          "default": "FiveM_Project_Resources",      
     },
     "PROJECT_NAME": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
