@@ -51,9 +51,9 @@ let activities = [
 
     i++;
   }, 30000);
-}
-
-function CheckForUpdate() {
+  
+  
+  function CheckForUpdate() {
     
     const ready_channel = client.channels.cache.find(c => c.id === process.env.READY_LOGS);
 
@@ -114,4 +114,5 @@ function CheckForUpdate() {
             }
         }
     )
+}
 }
