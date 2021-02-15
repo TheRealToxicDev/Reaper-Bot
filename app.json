@@ -18,6 +18,13 @@
   "scripts": {
     "start": "node ."
   },
+
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
   
   "addons": [
     "logdna"
@@ -35,7 +42,8 @@
     "RESOURCE_REPO": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "FiveM_Project_Resources"      
+          "value": "FiveM_Project_Resources",
+          "disabled": true      
     },
     "PROJECT_NAME": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
