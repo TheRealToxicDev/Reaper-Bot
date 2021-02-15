@@ -58,26 +58,26 @@ let activities = [
       .then(res => res.json())
       .then(json => {
 
-            if (json.TestVersion === package.version) {
+            if (json.CurrentVersion === package.version) {
               
             let up_to_date = new MessageEmbed()
             .setAuthor('Version Check Initiated', EmbedComponents.embedImage)
             .setColor(EmbedColors.onlineColor)
             .setDescription('Up-To Date and Ready to go!!')
             .addField('Current Version', `v${package.version}`)
-            .addField('Newest Version', `v${json.TestVersion}`)
+            .addField('Newest Version', `v${json.CurrentVersion}`)
             .setTimestamp()
             .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
               
             return ready_channel.send(up_to_date);
               
-            } else if (json.TestVersion !== package.version) { {
+            } else if (json.CurrentVersion !== package.version) { {
                 let outdated = new MessageEmbed()
                 .setAuthor('Version Check: Failed', EmbedComponents.embedImage)
                 .setColor(EmbedColors.offlineColor)
                 .setDescription('You are using an Outdated version of [FiveM Stats Bot](https://statsbot.toxicdev.me/), Please update to the Newest Release to avoid any possible issues.')
                 .addField('Current Version', `v${package.version}`)
-                .addField('Newest Version', `v${json.TestVersion}`)
+                .addField('Newest Version', `v${json.CurrentVersion}`)
                 .addField('Download Link', '[Click Me](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/releases)')
                 .setTimestamp()
                 .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
