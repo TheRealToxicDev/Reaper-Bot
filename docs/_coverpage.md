@@ -2,7 +2,7 @@
 
 # Virulent.js
 
-> A powerful Node Module that allows you to interact with the Discord API. 
+> The Discord Bot that every FiveM Server needs. 
 
-[GitHub](https://github.com/TheRealToxicDev/Virulent)
+[GitHub](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)
 [Get Started](#about)
