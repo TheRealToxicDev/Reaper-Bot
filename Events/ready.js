@@ -79,6 +79,7 @@ let activities = [
                 .addField('Current Version', `v${package.version}`)
                 .addField('Newest Version', `v${json.CurrentVersion}`)
                 .addField('Download Link', '[Click Me](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/releases)')
+                .addField('Change Log', '[Click Me](https://statsbot.toxicdev.me/changes)')
                 .setTimestamp()
                 .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
