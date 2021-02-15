@@ -41,13 +41,13 @@
     },
     "RESOURCE_REPO": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
-	  "required": false,
+	  "required": true,
           "value": "FiveM_Project_Resources"      
     },
     "PROJECT_NAME": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "default": "FiveM-Stats-Bot"
+          "value": "FiveM-Stats-Bot"
     },
     "MONGO": {
       "description": "Your Mongo DB Connection String | Example: mongodb://admin:PassWord@SG-StatsBot.servers.mongodirector.com:27017/admin",
