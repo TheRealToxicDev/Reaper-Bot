@@ -10,9 +10,14 @@
     "Entertainment",
     "TheRealToxicDev"
   ],
-  "website": "https://nadekobot.me/",
-  "repository": "https://github.com/ScarletKuro/NadekoBot",
-  "logo": "https://nadekobot.me/static/media/nadeko-top.ad6cc06a.png",
+  "website": "  "https://statsbot.toxicdev.me",
+  "repository": "https://github.com/TheRealToxicDev/FiveM-Stats",
+  "logo": "https://statsbot.toxicdev.me/images/Logo.png",
+  "success_url": "https://statsbot.toxicdev.me/deployed",
+
+  "scripts": {
+    "start": "node ."
+  },
   
   "addons": [
     "logdna"
