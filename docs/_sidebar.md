@@ -1,7 +1,5 @@
 - Versions:
-    - Current: v1.0.1
-    - Stable: v1.0.1
-    - Latest: [v1.0.1](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/releases/latest)
+    - Current: [v1.0.1](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/releases/latest)
 
 - About
     - [Intro](/about/index)
