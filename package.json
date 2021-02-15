@@ -44,6 +44,8 @@
       "@models": "./models",
       "@Database": "./Database",
       "@FiveM": "./FiveM-API",
-      "@Embeds": "./Structure/Embeds"
+      "@Embeds": "./Structure/Embeds",
+      "@Config": "./Config",
+      "@Functions": "./Functions"
      }
   }
