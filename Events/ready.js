@@ -19,26 +19,26 @@ module.exports = async (client) => {
       .then(res => res.json())
       .then(json => {
 
-            if (json.NewestVersion === package.version) {
+            if (json.TestVersion === package.version) {
               
             let up_to_date = new MessageEmbed()
             .setAuthor('Version Check Initiated', EmbedComponents.embedImage)
             .setColor(EmbedColors.onlineColor)
             .setDescription('Up-To Date and Ready to go!!')
             .addField('Current Version', `${package.version}`)
-            .addField('Newest Version', `${json.NewestVersion}`)
+            .addField('Newest Version', `${json.TestVersion}`)
             .setTimestamp()
             .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
               
             return ready_channel.send(up_to_date);
               
-            } else if (json.NewestVersion !== package.version) { {
+            } else if (json.TestVersion !== package.version) { {
                 let outdated = new MessageEmbed()
                 .setAuthor('Version Check: Failed', EmbedComponents.embedImage)
                 .setColor(EmbedColors.onlineColor)
                 .setDescription('You are using an Outdated version of [FiveM Stats Bot](https://statsbot.toxicdev.me/), Please download the Newest Release to avoid any issues.')
                 .addField('Current Version', `${package.version}`)
-                .addField('Newest Version', `${json.NewestVersion}`)
+                .addField('Newest Version', `${json.TestVersion}`)
                 .addField('Change Log', `${json.ChangeLog}`)
                 .setTimestamp()
                 .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
