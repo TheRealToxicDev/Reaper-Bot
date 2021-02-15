@@ -75,7 +75,7 @@ let activities = [
                 let outdated = new MessageEmbed()
                 .setAuthor('Version Check: Failed', EmbedComponents.embedImage)
                 .setColor(EmbedColors.offlineColor)
-                .setDescription('You are using an Outdated version of [FiveM Stats Bot](https://statsbot.toxicdev.me/), Please download the Newest Release to avoid any possible issues.')
+                .setDescription('You are using an Outdated version of [FiveM Stats Bot](https://statsbot.toxicdev.me/), Please update to the Newest Release to avoid any possible issues.')
                 .addField('Current Version', `v${package.version}`)
                 .addField('Newest Version', `v${json.TestVersion}`)
                 .addField('Download Link', '[Click Me](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/releases)')
