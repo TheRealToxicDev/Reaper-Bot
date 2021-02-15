@@ -7,9 +7,6 @@ const timers = require("timers");
 const HttpRequest = require('request');
 const { MessageEmbed } = require ('discord.js');
 
-const CheckForUpdate = require('@Functions/updateCheck');
-
-
 module.exports = async (client) => {
 
   CheckForUpdate();
