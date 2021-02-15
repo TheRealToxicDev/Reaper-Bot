@@ -47,7 +47,7 @@
     "PROJECT_NAME": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "FiveM-Stats-Bot"
+          "default": "FiveM-Stats-Bot"
     },
     "MONGO": {
       "description": "Your Mongo DB Connection String | Example: mongodb://admin:PassWord@SG-StatsBot.servers.mongodirector.com:27017/admin",
