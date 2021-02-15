@@ -4,6 +4,8 @@
 - About
     - [Intro](/about/index)
     - [FAQs](/about/faqs)
+- Getting Started
+    - [Setup](/settings/index)
 - Community
     - [Github](https://github.com/TheRealToxicDev/FiveM-Stats-Bot)
     - [Report an Issue](https://github.com/TheRealToxicDev/FiveM-Stats-Bot/issues)
