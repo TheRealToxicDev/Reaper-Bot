@@ -1,4 +1,4 @@
-![logo](img/50BF47E5-4FF9-4E50-A2DB-0B093FFF65B3.png)
+![logo](img/60E92F36-F953-49A9-B8F8-07B7DD10A34C.png)
 
 # Virulent.js
 
