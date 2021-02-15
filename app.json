@@ -1,26 +1,52 @@
 {
-  "name": "FiveM Stats Bot",
-  "description": "Simple Discord Bot made to Interact with your FiveM Server.",
+  "name": "FiveM Stats",
+  "description": "Just a simple Discord Bot to interact with and fetch stats from your FiveM Server",
   "keywords": [
-    "productivity",
-    "node",
-    "nodejs"
+    "Heroku",
+    "FiveM Stats",
+    "Discord",
+    "FiveM",
+    "Discord Bot",
+    "Entertainment",
+    "TheRealToxicDev"
   ],
-  "website": "https://statsbot.toxicdev.me/",
-  "repository": "https://github.com/TheRealToxicDev/FiveM-Stats",
-  "logo": "https://small-sharp-tool.com/logo.svg",
-  "success_url": "/welcome",
-  "scripts": {
-    "start": "node ."
-  },
+  "website": "https://nadekobot.me/",
+  "repository": "https://github.com/ScarletKuro/NadekoBot",
+  "logo": "https://nadekobot.me/static/media/nadeko-top.ad6cc06a.png",
+  
+  "addons": [
+    "logdna"
+  ],
   "env": {
-    "SECRET_TOKEN": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
+    "BOT_TOKEN": {
+      "description": "Discord BOT Token. Get it here: https://discordapp.com/developers/applications/",
+	  "required": true
     },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
+    "GITHUB_LINK": {
+      "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
+	  "required": true,
+          "value": "https://raw.githubusercontent.com/TheRealToxicDev/FiveM_Project_Resources/master/FiveM-Stats-Bot/StatsBot.json"
+    },
+    "RESOURCE_REPO": {
+      "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
+	  "required": true,
+          "value": "FiveM_Project_Resources"      
+    },
+    "PROJECT_NAME": {
+      "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
+	  "required": true,
+          "value": "FiveM-Stats-Bot"
+    },
+    "MONGO": {
+      "description": "Your Mongo DB Connection String | Example: mongodb://admin:PassWord@SG-StatsBot.servers.mongodirector.com:27017/admin",
+	  "required": true
+    },
+    "READY_LOGS": {
+      "description": "Discord Channel ID to send Update Notifications to (These are sent when the bot starts)",
+	  "required": true
     }
   }
 }
+
+
+
