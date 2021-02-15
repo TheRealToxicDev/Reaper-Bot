@@ -4,6 +4,8 @@ const { MessageEmbed } = require("discord.js");
 const EmbedColors = require ('@Embeds/colors');
 const EmbedComponents = require('@Embeds/components');
 
+const ready_channel = client.channels.cache.find(c => c.id === process.env.READY_LOGS);
+
 function CheckForUpdate() {
 
     const current_version = '1.0.0';
