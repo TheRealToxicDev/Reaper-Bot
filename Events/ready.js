@@ -65,7 +65,7 @@ let activities = [
             .setColor(EmbedColors.onlineColor)
             .setDescription('Up-To Date and Ready to go!!')
             .addField('Current Version', `v${package.version}`)
-            .addField('Newest Version', `v${json.version}`)
+            .addField('Newest Version', `v${json.current}`)
             .setTimestamp()
             .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
               
@@ -77,7 +77,7 @@ let activities = [
                 .setColor(EmbedColors.offlineColor)
                 .setDescription('You are using an Outdated version of [Reaper Bot](https://grimreaperbot.site/), Please update to the Newest Release to avoid any possible issues.')
                 .addField('Current Version', `v${package.version}`)
-                .addField('Newest Version', `v${json.version}`)
+                .addField('Newest Version', `v${json.current}`)
                 .addField('Download Link', '[Click Me](https://github.com/TheRealToxicDev/Reaper-Bot/releases)')
                 .addField('Change Log', '[Click Me](https://grimreaperbot.site/changes)')
                 .setTimestamp()
