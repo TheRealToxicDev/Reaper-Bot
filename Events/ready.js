@@ -58,26 +58,26 @@ let activities = [
       .then(res => res.json())
       .then(json => {
 
-            if (json.current === package.version) {
+            if (json.previous === package.version) {
               
             let up_to_date = new MessageEmbed()
             .setAuthor('Version Check: Successful', EmbedComponents.embedImage)
             .setColor(EmbedColors.onlineColor)
             .setDescription('Up-To Date and Ready to go!!')
             .addField('Current Version', `v${package.version}`)
-            .addField('Newest Version', `v${json.current}`)
+            .addField('Newest Version', `v${json.previous}`)
             .setTimestamp()
             .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
               
             return ready_channel.send(up_to_date);
               
-            } else if (json.current !== package.version) { {
+            } else if (json.previous !== package.version) { {
                 let outdated = new MessageEmbed()
                 .setAuthor('Version Check: Failed', EmbedComponents.embedImage)
                 .setColor(EmbedColors.offlineColor)
                 .setDescription('You are using an Outdated version of [Reaper Bot](https://grimreaperbot.site/), Please update to the Newest Release to avoid any possible issues.')
                 .addField('Current Version', `v${package.version}`)
-                .addField('Newest Version', `v${json.current}`)
+                .addField('Newest Version', `v${json.previous}`)
                 .addField('Download Link', '[Click Me](https://github.com/TheRealToxicDev/Reaper-Bot/releases)')
                 .addField('Change Log', '[Click Me](https://grimreaperbot.site/changes)')
                 .setTimestamp()
