@@ -1,4 +1,4 @@
-# FiveM Stats
+# Reaper Bot
 The Discord Bot that every FiveM Server needs.
 
 [![Database](https://img.shields.io/badge/Database-Mongoose%20-green.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot) [![API](https://img.shields.io/badge/API-v1.0.0%20-red.svg?style=flat)](http://help.toxicdev.me/docs/projects/fivem-stats-bot)
