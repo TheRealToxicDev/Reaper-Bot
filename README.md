@@ -12,7 +12,7 @@ The Discord Bot that every FiveM Server needs.
 
 ## Project Navigation
 - [Setup](https://help.toxicdev.me/docs/guides/statsbot-setup)
-- [Invite](https://statsbot.toxicdev.me/invite)
+- [Invite](https://grimreaperbot.site/invite)
 
 ---
 
@@ -20,8 +20,8 @@ The Discord Bot that every FiveM Server needs.
 * FiveM Server IP can not be set via the Dashboard.
 
 # Links
-* [Website](https://statsbot.toxicdev.me/)
-* [Privacy Policy](https://statsbot.toxicdev.me/privacy)
+* [Website](https://grimreaperbot.site/)
+* [Privacy Policy](https://grimreaperbot.site/privacy)
 
 # Support
 I mean it’s a pretty basic bot should be no support needed but join the [discord](https://discord.gg/MsWT8awvBZ) if you do need it. 
