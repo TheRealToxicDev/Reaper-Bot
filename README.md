@@ -1,5 +1,5 @@
 # Reaper Bot
-The Discord Bot that every FiveM Server needs.
+The Discord Bot that every FiveM Server needs. Monitor and Control your FiveM Server all from the Comfort of your Discord Server. 
 
 [![Database](https://img.shields.io/badge/Database-Mongoose%20-green.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot) [![API](https://img.shields.io/badge/API-v1.0.0%20-red.svg?style=flat)](http://help.toxicdev.me/docs/projects/fivem-stats-bot)
 [![FOSSA Status](https://img.shields.io/badge/Status-Online%20-green.svg?style=flat)](http://help.toxicdev.me/docs/projects/fivem-stats-bot)
