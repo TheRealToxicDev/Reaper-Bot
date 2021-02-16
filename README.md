@@ -19,12 +19,25 @@ The Discord Bot that every FiveM Server needs.
 # Information
 * FiveM Server IP can not be set via the Dashboard.
 
+---
+
 # Links
 * [Website](https://grimreaperbot.site/)
 * [Privacy Policy](https://grimreaperbot.site/privacy)
 
+---
+
 # Support
 I mean it’s a pretty basic bot should be no support needed but join the [discord](https://discord.gg/MsWT8awvBZ) if you do need it. 
+
+---
+
+## Self Hosting
+* [Hosting Guide](https://help.grimreaperbot.site/docs/hosting/overview)
+* [Heroku Auto Deploy](https://help.grimreaperbot.site/docs/hosting/heroku/auto/auto-deploy)
+* [Self/Local Hosting](https://help.grimreaperbot.site/docs/hosting/heroku/setup/intro)
+
+---
 
 ## Features
 
