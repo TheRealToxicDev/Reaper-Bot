@@ -37,7 +37,7 @@
     "VERSION_API": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "https://raw.githubusercontent.com/TheRealToxicDev/Reaper-Bot/main/package.json"
+          "value": "https://grimreaperbot.site/api/version/check"
     },
     "RESOURCE_REPO": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
