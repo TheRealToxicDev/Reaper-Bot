@@ -37,17 +37,17 @@
     "GITHUB_LINK": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "https://raw.githubusercontent.com/TheRealToxicDev/FiveM_Project_Resources/master/FiveM-Stats-Bot/StatsBot.json"
+          "value": "https://raw.githubusercontent.com/TheRealToxicDev/ReaperBot/master/package.json"
     },
     "RESOURCE_REPO": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "FiveM_Project_Resources"      
+          "value": "Reaper-Bot"      
     },
     "PROJECT_NAME": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "FiveM-Stats-Bot"
+          "value": "Reaper-Bot"
     },
     "MONGO": {
       "description": "Your Mongo DB Connection String | Example: mongodb://admin:PassWord@SG-StatsBot.servers.mongodirector.com:27017/admin",
