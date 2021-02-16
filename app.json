@@ -10,10 +10,10 @@
     "Entertainment",
     "TheRealToxicDev"
   ],
-  "website": "https://statsbot.toxicdev.me",
-  "repository": "https://github.com/TheRealToxicDev/FiveM-Stats",
-  "logo": "https://statsbot.toxicdev.me/images/9F38720E-ADB2-4F56-AF1A-49AD63879987.png",
-  "success_url": "https://statsbot.toxicdev.me/deployed",
+  "website": "https://grimreaperbot.site/",
+  "repository": "https://github.com/TheRealToxicDev/Reaper-Bot",
+  "logo": "https://help.grimreaperbot.site/img/D996EDF1-74BE-4253-9AAF-A9ED450268FE.png",
+  "success_url": "https://grimreaperbot.site/deployed",
 
   "scripts": {
     "start": "node ."
