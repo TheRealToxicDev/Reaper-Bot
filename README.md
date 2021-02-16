@@ -51,8 +51,10 @@ I mean it’s a pretty basic bot should be no support needed but join the [disco
 
 ---
 
-## Issues
+## Issues and Suggestions
 
-If you find any bugs please make a issue so i can look into it and fix it
+- If you find any bugs please make a issue so i can look into it and fix it
+
+- Suggestions can be made in our discord or by submitting a issue here.
 
 ---
