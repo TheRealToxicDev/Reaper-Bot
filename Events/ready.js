@@ -54,7 +54,7 @@ let activities = [
     i++;
   }, 30000);
   
-     await fetch(process.env.GITHUB_LINK)
+     await fetch(process.env.VERSION_API)
       .then(res => res.json())
       .then(json => {
 
