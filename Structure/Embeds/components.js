@@ -1,3 +1,3 @@
-exports.embedImage = 'https://cdn.discordapp.com/attachments/734686866690932767/797246498827665418/FiveM.png'
+exports.embedImage = 'https://help.grimreaperbot.site/img/D996EDF1-74BE-4253-9AAF-A9ED450268FE.png'
 
-exports.embedFooter = '© FiveM Stats | 2021'
+exports.embedFooter = '© Reaper Bot | 2021'
