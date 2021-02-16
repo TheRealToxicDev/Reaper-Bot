@@ -58,7 +58,7 @@ let activities = [
       .then(res => res.json())
       .then(json => {
 
-            if (json.version === package.version) {
+            if (json.current === package.version) {
               
             let up_to_date = new MessageEmbed()
             .setAuthor('Version Check: Successful', EmbedComponents.embedImage)
@@ -71,7 +71,7 @@ let activities = [
               
             return ready_channel.send(up_to_date);
               
-            } else if (json.version !== package.version) { {
+            } else if (json.current !== package.version) { {
                 let outdated = new MessageEmbed()
                 .setAuthor('Version Check: Failed', EmbedComponents.embedImage)
                 .setColor(EmbedColors.offlineColor)
