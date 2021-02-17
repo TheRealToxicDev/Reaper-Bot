@@ -19,6 +19,8 @@ module.exports.run = async (client, message, args) => {
            .addField('Stats Command', '``fsb.server-stats`` | Display your FiveM Server Stats', true)
            .addField('Invite Command', '``fsb.invite`` | Invite the bot to your server', true)
            .addField('Prefix Command', '``fsb.prefix`` | Set the bots prefix for your server', true)
+           .addField('RCON Command', '``fsb.rcon`` | Set your RCON Password or Execute Commands', true)
+           .addField('Native Command', '``fsb.native`` | Use the FiveM Search Native.', true)
            .addField('\u200B', '\u200B')
            .addField('My Website', `[Click Me](${website_link})`, true)
            .addField('Dashboard', `[Click Me](${website_link}/dashboard)`, true)
