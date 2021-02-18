@@ -3,7 +3,7 @@ The Discord Bot that every FiveM Server needs. Monitor and Control your FiveM Se
 
 [![Database](https://img.shields.io/badge/Database-Mongoose%20-green.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot) [![API](https://img.shields.io/badge/API-v1.0.0%20-red.svg?style=flat)](http://help.toxicdev.me/docs/projects/fivem-stats-bot)
 [![FOSSA Status](https://img.shields.io/badge/Status-Online%20-green.svg?style=flat)](http://help.toxicdev.me/docs/projects/fivem-stats-bot)
-[![Bot Code Library](https://img.shields.io/badge/Library-discord.js-orange.svg)](https://discord.js.org/#/) [![Version](https://img.shields.io/badge/Version-1.00-blue.svg)](http://help.toxicdev.me/docs/projects/ninjabot) [![Dependencies](https://img.shields.io/badge/Dependencies-43%20-9cf.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot) [![Build](https://img.shields.io/badge/Build-Stable%20-success.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot)
+[![Bot Code Library](https://img.shields.io/badge/Library-discord.js-orange.svg)](https://discord.js.org/#/) [![Version](https://img.shields.io/badge/Version-1.0.3-blue.svg)](http://help.toxicdev.me/docs/projects/ninjabot) [![Dependencies](https://img.shields.io/badge/Dependencies-43%20-9cf.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot) [![Build](https://img.shields.io/badge/Build-Stable%20-success.svg?style=flat)](http://help.toxicdev.me/docs/projects/ninjabot)
 
 
 
