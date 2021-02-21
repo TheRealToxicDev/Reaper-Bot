@@ -24,7 +24,7 @@ let activities = [
       }
     },
     {
-      name: ` fsb.help || fsb.setup (Soon)`,
+      name: ` fsb.help || fsb.setup`,
       options: {
         type: 'STREAMING',
         url: "https://www.twitch.tv/monstercat"
@@ -37,7 +37,7 @@ let activities = [
       }
     },
     {
-      name: 'statsbot.toxicdev.me',
+      name: 'https://grimreaperbot.site/',
       options: {
         type: 'WATCHING'
       }
