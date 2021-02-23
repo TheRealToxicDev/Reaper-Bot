@@ -37,7 +37,7 @@
     "VERSION_API": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
 	  "required": true,
-          "value": "https://api.toxicdev.me/version/check/reaper-bot"
+          "value": "https://api.toxicfx.org/v1/projects/reaper"
     },
     "RESOURCE_REPO": {
       "description": "Used for Update Checks and Notifications | DO NOT CHANGE THIS",
