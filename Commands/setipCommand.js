@@ -60,11 +60,11 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: "setup",
+    name: "set-ip",
     category: "Utility",
-    aliases: ['set', 'config'],
-    description: "Run the setup process.",
-    example: "``fsb.setup || fsb.setup <2> false``"
+    aliases: [],
+    description: "Set your FiveM Server IP and PORT.",
+    example: "``fsb.set-ip 127.0.0.1:30120``"
 }
 
 module.exports.requirements = {
