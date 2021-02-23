@@ -58,3 +58,6 @@ I mean it’s a pretty basic bot should be no support needed but join the [disco
 - Suggestions can be made in our discord or by submitting a issue here.
 
 ---
+
+## Screenshots
+![Server Stats Command](https://media.discordapp.net/attachments/812801899580883035/813918188659933214/image0.png)
