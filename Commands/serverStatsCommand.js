@@ -35,12 +35,9 @@ module.exports.run = async (client, message, args) => {
                 if (result < 1) result = 'No Players Online'
                 
                 if(result === 'undefined') result = '0'
-                
-                let server_name = `${guild.FiveMName} | Information` || "FiveM Server Information"
-               
                     
                 const result_embed = new MessageEmbed()
-                   .setAuthor(server_name, EmbedComponents.embedImage)
+                   .setAuthor(`${guild.FiveMName}`, EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
                    .addField('One Sync', `${server.infos.vars.onesync_enabled}`, true)
