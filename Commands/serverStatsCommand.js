@@ -16,6 +16,8 @@ module.exports.run = async (client, message, args) => {
         message.delete().catch()
         
         let players;
+        
+        let server_name = `${guild.FiveMName} | Information` || "FiveM Server Information"
 
         let guild = await Guilds.findOne({ guildID: message.guild.id });
         
@@ -38,7 +40,7 @@ module.exports.run = async (client, message, args) => {
                
                     
                 const result_embed = new MessageEmbed()
-                   .setAuthor('Server Information', EmbedComponents.embedImage)
+                   .setAuthor(server_name, EmbedComponents.embedImage)
                    .setColor(EmbedColors.onlineColor)
                    .setDescription('**STATUS:** ONLINE 🟢')
                    .addField('One Sync', `${server.infos.vars.onesync_enabled}`, true)
