@@ -24,7 +24,7 @@ let activities = [
       }
     },
     {
-      name: ` fsb.help || fsb.setup`,
+      name: `fsb.help`,
       options: {
         type: 'STREAMING',
         url: "https://www.twitch.tv/monstercat"
