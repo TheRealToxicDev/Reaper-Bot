@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
                    .addField('Scripthook', `${server.infos.vars.sv_scriptHookAllowed}`, true)
                    .addField('Resources', `${server.infos.resources}`, true)
                    .addField('Language', `${server.infos.vars.locale}`, true)
-                   .addField('FX Version', `${server.infos.vars.version}`, true)
+                   .addField('FX Version', `${server.infos.version}`, true)
                    .addField('Server Tags', `${server.infos.vars.tags}`, true)
                    .addField('Player Count', `${server.players.length}/${server.infos.vars.sv_maxClients}`, true)
                    .addField('Player List', result, true)
