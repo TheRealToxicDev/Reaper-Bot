@@ -11,7 +11,7 @@ The Discord Bot that every FiveM Server needs. Monitor and Control your FiveM Se
 ---
 
 ## Project Navigation
-- [Setup](https://help.toxicdev.me/docs/guides/statsbot-setup)
+- [Setup](https://help.toxicdev.me/discord/statsbot/setup/)
 - [Invite](https://grimreaperbot.site/invite)
 
 ---
