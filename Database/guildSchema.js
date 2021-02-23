@@ -16,6 +16,11 @@ const guildSchema = new mongo.Schema({
         unique: true
     },
     
+    FiveMName: {
+        type: String,
+        unique: true
+    },
+    
      prefix: {
         type : String,
         default: 'fsb.',
