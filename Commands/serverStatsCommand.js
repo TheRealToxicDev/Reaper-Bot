@@ -16,8 +16,6 @@ module.exports.run = async (client, message, args) => {
         message.delete().catch()
         
         let players;
-        
-        let server_name = `${guild.FiveMName} | Information` || "FiveM Server Information"
 
         let guild = await Guilds.findOne({ guildID: message.guild.id });
         
@@ -37,6 +35,8 @@ module.exports.run = async (client, message, args) => {
                 if (result < 1) result = 'No Players Online'
                 
                 if(result === 'undefined') result = '0'
+                
+                let server_name = `${guild.FiveMName} | Information` || "FiveM Server Information"
                
                     
                 const result_embed = new MessageEmbed()
