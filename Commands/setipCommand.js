@@ -28,9 +28,9 @@ module.exports.run = async (client, message, args) => {
         
         let FiveMInfo = args.slice(0).join(' ');
 
-        if (!FiveMInfo) return message.channel.send('Please provide the Server IP and Port \n > (IE: **fsb.setup 0.0.0.0:0000**)')
+        if (!FiveMInfo) return message.channel.send('Please provide the Server IP and Port \n > (IE: **fsb.set-ip 0.0.0.0:0000**)')
 
-        if (!FiveMInfo.includes(':')) return message.channel.send('Please provide the Server IP and Port \n > (IE: **fsb.setup 0.0.0.0:0000**)')
+        if (!FiveMInfo.includes(':')) return message.channel.send('Please provide the Server IP and Port \n > (IE: **fsb.set-ip 0.0.0.0:0000**)')
 
         await Guilds.updateOne({ guildID: message.guild.id }, { $set: { FiveMServer: FiveMInfo }});
 
