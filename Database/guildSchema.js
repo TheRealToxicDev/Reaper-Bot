@@ -19,6 +19,7 @@ const guildSchema = new mongo.Schema({
     FiveMName: {
         type: String,
         unique: true
+        default: 'FiveM Server Information'
     },
     
      prefix: {
