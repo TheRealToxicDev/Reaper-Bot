@@ -41,7 +41,7 @@ module.exports = async (client, message) => {
     ownerOnly.setFooter('© Reaper Bot | 2021', client.config.embedImage)
 
 
-    if(cmd.requirements.devOnly && !client.staff.includes(message.author.id))
+    if(cmd.requirements.devOnly && !message.author.id === "510065483693817867")
     return message.channel.send(ownerOnly)
 
     let embed = new MessageEmbed()
