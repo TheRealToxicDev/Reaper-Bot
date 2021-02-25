@@ -27,6 +27,18 @@ module.exports.run = async (client, message, args) => {
 
         let prefix = guild.prefix || 'fsb.';
 
+        let no_args = new MessageEmbed()
+            .setAuthor('Error with Setup', EmbedComponents.embedImage)
+            .setColor(EmbedColors.offlineColor)
+            .setDescription('Please enter a `rcon_ password`')
+            .addField('Command Example', `${prefix}rcon set password123`, true)
+            .addField('Command Help', `${prefix}rcon help`, true)
+            .setTimestamp()
+            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+
+        if (!args[0]) return message.channel.send(no_args);
+
+
         if (args[0] == 'set') {
 
             if (args[1] == null || args[1] == ' ' || !args[1]) {
