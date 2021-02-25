@@ -35,11 +35,11 @@ module.exports = async (client, message) => {
     if(!message.channel.permissionsFor(message.guild.me).toArray().includes("SEND_MESSAGES")) return;
 
     let ownerOnly = new MessageEmbed()
-    ownerOnly.setTitle("Lacking Permissions ❌")
-    ownerOnly.setDescription("Ree!! You dont have permission to use this command!!")
+    ownerOnly.setTitle("Command Disabled")
+    ownerOnly.setDescription("Ree!! It looks like my Dev has disabled this command, This is probably due to the fact that it is buggy or being worked on. Please await an update or spam <@!?510065483693817867>")
 
     if(cmd.requirements.devOnly && !client.staff.includes(message.author.id))
-    return message.channel.send(ownerEmbed)
+    return message.channel.send(ownerOnly)
 
     let embed = new MessageEmbed()
     .setAuthor("Lacking Permissions ❌", client.config.embedImage)
