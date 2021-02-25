@@ -51,8 +51,8 @@ module.exports.run = async (client, message, args) => {
                   .setColor(EmbedColors.onlineColor)
                   .setDescription(`${tempNatives[i].body}`)
                   .addField('Body', `${tempNatives[i].prefix}`, true)
-                  .addField('Description', `${tempNatives[i].description}`, true)
-                  .addField('Search Query', `${search_query}`, true)
+                  .addField('Type', `${tempNatives[i].description}`, true)
+                  .addField('Query', `${search_query}`, true)
                   .setTimestamp()
                   .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
 
