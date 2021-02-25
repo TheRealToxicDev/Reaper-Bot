@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
         let prefix = guild.prefix || 'fsb.';
 
         let no_args = new MessageEmbed()
-            .setAuthor('Error with Setup', EmbedComponents.embedImage)
+            .setAuthor('Error: Missing Args', EmbedComponents.embedImage)
             .setColor(EmbedColors.offlineColor)
             .setDescription('Please enter a `rcon_ password`')
             .addField('Command Example', `${prefix}rcon set password123`, true)
