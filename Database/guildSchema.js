@@ -21,6 +21,11 @@ const guildSchema = new mongo.Schema({
         unique: true,
         default: 'FiveM Server Information'
     },
+
+     rconPassword: {
+         type: String,
+         unique: true
+    },
     
      prefix: {
         type : String,
