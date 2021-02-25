@@ -61,3 +61,4 @@ I mean it’s a pretty basic bot should be no support needed but join the [disco
 
 ## Screenshots
 ![Server Stats Command](https://media.discordapp.net/attachments/812801899580883035/813918188659933214/image0.png)
+![Native Search Command](https://media.discordapp.net/attachments/734686866690932767/814549178217660466/image0.png)
