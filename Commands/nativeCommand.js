@@ -17,6 +17,12 @@ const colors = require("colors")
 
 module.exports.run = async (client, message, args) => {
 
+   let guild = await Guilds.findOne({ guildID: message.guild.id });
+
+   if (!guild) await new Guilds({ guildID: message.guild.id }).save();
+
+   let prefix = guild.prefix || 'fsb.'
+
     message.delete().catch()
 
         let no_args = new MessageEmbed()
