@@ -19,6 +19,16 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
 
+        let no_args = new MessageEmbed()
+            .setAuthor('Error: Missing Search Query', EmbedComponents.embedImage)
+            .setColor(EmbedColors.offlineColor)
+            .setDescription('Please provide something to search')
+            .addField('Command Example', `${prefix}native SetPedToRagdoll`, true)
+            .setTimestamp()
+            .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
+
+        if (!args[0]) return message.channel.send(no_args);
+
     try {
 
         let query = []
