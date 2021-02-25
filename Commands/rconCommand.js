@@ -95,7 +95,7 @@ module.exports.run = async (client, message, args) => {
           .setAuthor('Error with Setup', EmbedComponents.embedImage)
           .setColor(EmbedColors.offlineColor)
           .setDescription('Please report this to Toxic Dev')
-          .addField('Error', `${error.message}`, true)
+          .addField('Error', `${error}`, true)
           .setTimestamp()
           .setFooter(EmbedComponents.embedFooter, EmbedComponents.embedImage)
         
