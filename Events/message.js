@@ -28,7 +28,7 @@ module.exports = async (client, message) => {
     let no_cmd = new MessageEmbed()
     .setAuthor("Command not Found", client.config.embedImage)
     .setDescription(`${commands} Is not a command that i can find.`)
-    .setFooter('© FiveM Stats | 2021', client.config.embedImage)
+    .setFooter('© Reaper Bot | 2021', client.config.embedImage)
 
     if(!cmd) return message.channel.send(no_cmd);
 
@@ -37,6 +37,9 @@ module.exports = async (client, message) => {
     let ownerOnly = new MessageEmbed()
     ownerOnly.setTitle("Command Disabled")
     ownerOnly.setDescription("Ree!! It looks like my Dev has disabled this command, This is probably due to the fact that it is buggy or being worked on. Please await an update or spam <@!?510065483693817867>")
+    ownerOnly.setTimestamp()
+    ownerOnly.setFooter('© Reaper Bot | 2021', client.config.embedImage)
+
 
     if(cmd.requirements.devOnly && !client.staff.includes(message.author.id))
     return message.channel.send(ownerOnly)
