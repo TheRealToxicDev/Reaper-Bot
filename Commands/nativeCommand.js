@@ -62,7 +62,7 @@ module.exports.run = async (client, message, args) => {
     } catch (error) {
 
         let error_embed = new MessageEmbed()
-          .setAuthor('Error with Setup', EmbedComponents.embedImage)
+          .setAuthor('Error with Search', EmbedComponents.embedImage)
           .setColor(EmbedColors.offlineColor)
           .setDescription('Please report this to Toxic Dev')
           .addField('Error', `${error.message}`, true)
