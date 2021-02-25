@@ -43,7 +43,7 @@ module.exports.run = async (client, message, args) => {
                    .addField('One Sync', `${server.infos.vars.onesync_enabled}`, true)
                    .addField('Game Build', `${server.infos.vars.sv_enforceGameBuild}`, true)
                    .addField('Scripthook', `${server.infos.vars.sv_scriptHookAllowed}`, true)
-                   .addField('Resources', `${server.infos.resources}`, true)
+                   //.addField('Resources', `${server.infos.resources}`, true)
                    .addField('Language', `${server.infos.vars.locale}`, true)
                    .addField('FX Version', `${server.infos.version}`, true)
                    .addField('Server Tags', `${server.infos.vars.tags}`, true)
